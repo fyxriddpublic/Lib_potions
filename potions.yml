@@ -1,0 +1,22 @@
+﻿#mode:
+#  - 1 已经有此类型药效情况下,取等级高,时间长的(等级优先于时间)
+#  - 2 已经有此类型药效情况下,强制覆盖
+#  - 3 已经有此类型药效情况下,不覆盖
+
+#药效时间(单位tick)可以是:
+#  - 'time'      固定时间,>=0
+#  - 'min-max'   随机从min到max级,max>=min>=0
+#  - 'time:chance[;time:chance...]'  时间:几率,time>=0,chance>=0,如'100:20;200:10'
+#注:时间0会直接跳过,而不会进行检测
+
+#药效等级可以是:
+#  - 'level'     固定等级,>=0
+#  - 'min-max'   随机从min到max级,max>=min>=0
+#  - 'level:chance[;level:chance...]'  等级:几率,level>=0,level为none时表示无药效,chance>=0,如'none:50;0:15;1:10'
+#注:none级药效会直接跳过,而不会进行检测
+
+normal:                         #药效类型名
+  mode: 1
+  all: true                     #是否全部检测,false表示成功应用一个后就不继续检测
+  potions:
+    - "SPEED 1200 0"            #药效类型名|ID 药效时间 药效等级
