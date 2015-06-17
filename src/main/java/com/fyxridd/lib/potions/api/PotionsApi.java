@@ -1,6 +1,6 @@
-package lib.potions.api;
+package com.fyxridd.lib.potions.api;
 
-import lib.potions.PotionsMain;
+import com.fyxridd.lib.potions.PotionsMain;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.LivingEntity;
 

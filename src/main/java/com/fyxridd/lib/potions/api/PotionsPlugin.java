@@ -1,8 +1,8 @@
-package lib.potions.api;
+package com.fyxridd.lib.potions.api;
 
-import lib.core.api.CoreApi;
-import lib.core.api.FormatApi;
-import lib.potions.PotionsMain;
+import com.fyxridd.lib.core.api.CoreApi;
+import com.fyxridd.lib.core.api.FormatApi;
+import com.fyxridd.lib.potions.PotionsMain;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;

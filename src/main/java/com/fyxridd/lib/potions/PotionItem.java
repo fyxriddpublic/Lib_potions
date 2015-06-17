@@ -1,6 +1,6 @@
-package lib.potions;
+package com.fyxridd.lib.potions;
 
-import lib.core.api.CoreApi;
+import com.fyxridd.lib.core.api.CoreApi;
 import org.bukkit.potion.PotionEffectType;
 
 public class PotionItem {

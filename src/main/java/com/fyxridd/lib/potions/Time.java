@@ -1,7 +1,7 @@
-package lib.potions;
+package com.fyxridd.lib.potions;
 
-import lib.core.api.hashList.ChanceHashList;
-import lib.core.api.hashList.ChanceHashListImpl;
+import com.fyxridd.lib.core.api.hashList.ChanceHashList;
+import com.fyxridd.lib.core.api.hashList.ChanceHashListImpl;
 
 import java.util.Random;
 

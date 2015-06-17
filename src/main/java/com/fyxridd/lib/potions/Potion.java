@@ -1,4 +1,4 @@
-package lib.potions;
+package com.fyxridd.lib.potions;
 
 import java.util.List;
 

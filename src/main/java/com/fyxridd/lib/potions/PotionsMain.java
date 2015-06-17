@@ -1,9 +1,9 @@
-package lib.potions;
+package com.fyxridd.lib.potions;
 
-import lib.core.api.ConfigApi;
-import lib.core.api.CoreApi;
-import lib.core.api.event.ReloadConfigEvent;
-import lib.potions.api.PotionsPlugin;
+import com.fyxridd.lib.core.api.ConfigApi;
+import com.fyxridd.lib.core.api.CoreApi;
+import com.fyxridd.lib.core.api.event.ReloadConfigEvent;
+import com.fyxridd.lib.potions.api.PotionsPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -40,7 +40,7 @@ public class PotionsMain implements Listener{
 	}
 
     /**
-     * @see lib.potions.api.PotionsApi#reloadPotions(String, org.bukkit.configuration.file.YamlConfiguration)
+     * @see com.fyxridd.lib.potions.api.PotionsApi#reloadPotions(String, org.bukkit.configuration.file.YamlConfiguration)
      */
     public static void reloadPotions(String plugin, YamlConfiguration config) {
         if (plugin == null || config == null) return;
@@ -53,7 +53,7 @@ public class PotionsMain implements Listener{
     }
 
     /**
-     * @see lib.potions.api.PotionsApi#addPotions(String, String, org.bukkit.entity.LivingEntity)
+     * @see com.fyxridd.lib.potions.api.PotionsApi#addPotions(String, String, org.bukkit.entity.LivingEntity)
      */
     public static boolean addPotions(String plugin, String type, LivingEntity le) {
         if (plugin == null || type == null || le == null) return false;
@@ -114,7 +114,7 @@ public class PotionsMain implements Listener{
         int mode = config.getInt(type+".mode");
         if (mode < 1) {
             mode = 1;
-            ConfigApi.log(PotionsPlugin.pn, "load potion effect type '"+type+"''s mode error");
+            ConfigApi.log(PotionsPlugin.pn, "load potion effect type '" + type + "''s mode error");
         }
         if (mode > 3) {
             mode = 3;
