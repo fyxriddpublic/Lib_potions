@@ -140,9 +140,7 @@ public class PotionsMain implements Listener{
     }
 
     private void initConfig() {
-        List<String> filter = ConfigApi.getDefaultFilter();
-        filter.add("potions.yml");
-        ConfigApi.register(PotionsPlugin.file, PotionsPlugin.dataPath, filter, PotionsPlugin.pn, null);
+        ConfigApi.register(PotionsPlugin.file, PotionsPlugin.dataPath, PotionsPlugin.pn, null);
         ConfigApi.loadConfig(PotionsPlugin.pn);
     }
 
