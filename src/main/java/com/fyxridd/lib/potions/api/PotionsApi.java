@@ -4,7 +4,17 @@ import com.fyxridd.lib.potions.PotionsMain;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.LivingEntity;
 
+import java.io.File;
+
 public class PotionsApi {
+    /**
+     * @param file yml文件,可为null(null时无效果)
+     * @see #reloadPotions(String, org.bukkit.configuration.file.YamlConfiguration)
+     */
+    public static void reloadPotions(String plugin, File file) {
+        PotionsMain.reloadPotions(plugin, file);
+    }
+
     /**
      * 从配置文件中重新读取potions配置
      * @param plugin 注册的插件名,可为null(null时无效果)
