@@ -113,7 +113,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${env.C183_PLUGINS}</outputDirectory>
+                            <outputDirectory>${env.NBPVP_PLUGINS}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${basedir}/target</directory>
