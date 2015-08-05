@@ -63,10 +63,10 @@ public class PotionsMain implements Listener{
     /**
      * @see com.fyxridd.lib.potions.api.PotionsApi#addPotions(String, String, org.bukkit.entity.LivingEntity)
      */
-    public static boolean addPotions(String plugin, String type, LivingEntity le) {
-        if (plugin == null || type == null || le == null) return false;
+    public static List<PotionEffect> addPotions(String plugin, String type, LivingEntity le) {
+        List<PotionEffect> result = new ArrayList<PotionEffect>();
+        if (plugin == null || type == null || le == null) return result;
 
-        boolean result = false;
         //不存在此注册的药效类型
         if (!potionsHash.containsKey(plugin) || !potionsHash.get(plugin).containsKey(type)) return result;
         //检测添加
@@ -102,7 +102,7 @@ public class PotionsMain implements Listener{
             //添加药效
             PotionEffect pe = new PotionEffect(potionItem.potionEffectType, time, level, false);
             le.addPotionEffect(pe, true);
-            result = true;
+            result.add(pe);
 
             //是否检测下个药效
             if (!potion.all) break;

@@ -1,5 +1,5 @@
 ﻿name: Lib_potions
 main: com.fyxridd.lib.potions.api.PotionsPlugin
-version: 1.1.0
+version: 1.2.0
 depend: [Lib_core]
 softdepend:

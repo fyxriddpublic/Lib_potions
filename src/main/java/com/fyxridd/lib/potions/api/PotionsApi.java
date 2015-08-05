@@ -3,8 +3,10 @@ package com.fyxridd.lib.potions.api;
 import com.fyxridd.lib.potions.PotionsMain;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.potion.PotionEffect;
 
 import java.io.File;
+import java.util.List;
 
 public class PotionsApi {
     /**
@@ -29,9 +31,9 @@ public class PotionsApi {
      * @param plugin 插件名,可为null(null时返回false)
      * @param type 药效类型,可为null(null时返回false)
      * @param le 增加药效的生物,可为null(null时返回false)
-     * @return 添加是否成功(只要有一个成功)
+     * @return 添加成功的药效列表,不为null可为空列表
      */
-    public static boolean addPotions(String plugin, String type, LivingEntity le) {
+    public static List<PotionEffect> addPotions(String plugin, String type, LivingEntity le) {
         return PotionsMain.addPotions(plugin, type, le);
     }
 }
