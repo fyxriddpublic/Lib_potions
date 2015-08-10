@@ -20,7 +20,7 @@ public class PotionsMain implements Listener{
     private static String savePath;
 
     //插件名 类型名 类型信息
-    private static  HashMap<String, HashMap<String, Potion>> potionsHash = new HashMap<String, HashMap<String, Potion>>();
+    private static  HashMap<String, HashMap<String, Potion>> potionsHash = new HashMap<>();
 
     public PotionsMain() {
         savePath = PotionsPlugin.dataPath+File.separator+"potions.yml";
