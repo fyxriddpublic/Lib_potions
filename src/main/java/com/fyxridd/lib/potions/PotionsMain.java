@@ -39,17 +39,16 @@ public class PotionsMain implements Listener{
         }
 	}
 
-    /**
-     * @see com.fyxridd.lib.potions.api.PotionsApi#reloadPotions(String, File)
-     */
+    public static void reloadPotions(String plugin) {
+        if (plugin == null) return;
+        reloadPotions(plugin, CoreApi.loadConfigByUTF8(new File(CoreApi.pluginPath, plugin+"/potions.yml")));
+    }
+
     public static void reloadPotions(String plugin, File file) {
         if (plugin == null || file == null) return;
         reloadPotions(plugin, CoreApi.loadConfigByUTF8(file));
     }
 
-    /**
-     * @see com.fyxridd.lib.potions.api.PotionsApi#reloadPotions(String, org.bukkit.configuration.file.YamlConfiguration)
-     */
     public static void reloadPotions(String plugin, YamlConfiguration config) {
         if (plugin == null || config == null) return;
 
