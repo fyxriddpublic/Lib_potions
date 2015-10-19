@@ -147,7 +147,7 @@ public class PotionsMain implements Listener{
     }
 
     private void initConfig() {
-        ConfigApi.register(PotionsPlugin.file, PotionsPlugin.dataPath, PotionsPlugin.pn, null);
+        ConfigApi.register(PotionsPlugin.file, PotionsPlugin.dataPath, PotionsPlugin.pn);
         ConfigApi.loadConfig(PotionsPlugin.pn);
     }
 
